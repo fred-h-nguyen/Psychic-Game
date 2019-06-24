@@ -12,7 +12,6 @@ console.log(compGuess);
 
 var restart = function(){
     guesses=10;
-    playerGuessText.textContent = "";
     compGuess = alphabet[Math.floor(Math.random()*alphabet.length)];
     console.log(compGuess);
 };
@@ -25,28 +24,32 @@ document.onkeyup = function(event){
     var lossText = document.getElementById("loss");
     var guessLeft = document.getElementById("guesses");
     var playerGuessText = document.getElementById("playerGuessText");
+    var guessReset = function(){
+        playerGuess = " ";
+        playerGuessText.textContent = playerGuess;
+    }
     //console.log(playerGuess);
 
     //if guess is correct increase win counter by 1
     if (playerGuess === compGuess) {
         win++;  
         restart();  
-        
+        guessReset();
     } else {
         guesses --; //if guess is wrong decrease counter by 1
     //add letter to the guess section maybe write as a function?
+        playerGuessText.insertAdjacentText("beforeend",playerGuess +", ");
     }
     
     if (guesses === 0) {
         losses ++; //if guesses hit 0 then increase losses counter by 1
         restart();
+        guessReset();
     }
 
     winText.textContent = win;    
     lossText.textContent = losses;
     guessLeft.textContent = guesses;
-    playerGuessText.insertAdjacentText("beforeend",playerGuess +", ");
-
-    //reset the game maybe write as a function?
+    
 };
 
