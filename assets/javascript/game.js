@@ -1,9 +1,12 @@
 //make an array containing all 26 letters
-var computerChoice = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-
+var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+// variables to keep track of the game
+var win = 0;
+var losses = 0;
+var guesses = 10;
 
 //have the computer randomly generate a number then pick a letter from the array
-var compGuess = computerChoice[Math.floor(Math.random()*computerChoice.length)];
+var compGuess = alphabet[Math.floor(Math.random()*alphabet.length)];
 
 console.log(compGuess);
 
