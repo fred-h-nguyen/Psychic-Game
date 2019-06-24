@@ -15,31 +15,24 @@ console.log(compGuess);
 document.onkeyup = function(event){
     var playerGuess = event.key;
     var winText = document.getElementById("win");
-    var lossText = document.getElementById("losses");
+    var lossText = document.getElementById("loss");
     var guessLeft = document.getElementById("guesses");
-    var playerGuessText = document.getElementById("playerGuess");
+    var playerGuessText = document.getElementById("playerGuessText");
     console.log(playerGuess);
 
     //if guess is correct increase win counter by 1
     if (playerGuess === compGuess) {
         win++;
-        winText.textContent = win;
     } else {
         guesses --; //if guess is wrong decrease counter by 1
-        guessLeft.textContent = guesses;
     //add letter to the guess section maybe write as a function?
-    } if (guesses == 0) {
+    } if (guesses === 0) {
         losses ++; //if guesses hit 0 then increase losses counter by 1
-        lossText.textContent = losses;
     }
-    
-    
-
-    
-
-    
-
-    //playerGuessText.insertAdjacentText("beforeend",'playerGuess + ","');
+    winText.textContent = win;    
+    lossText.textContent = losses;
+    guessLeft.textContent = guesses;
+    playerGuessText.insertAdjacentText("beforeend",playerGuess +", ");
 
 
     //reset the game maybe write as a function?
