@@ -1,4 +1,5 @@
 //make an array containing all 26 letters
+var computerChoice = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
 
 //have the computer randomly generate a number then pick a letter from the array
