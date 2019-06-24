@@ -9,22 +9,26 @@ console.log(compGuess);
 
 // onkeyup store as playerguess
 
+document.onkeyup = function(event){
+    var playerGuess = event.key;
+    console.log(playerGuess);
 
-//give the player 10 guesses
-
-
-//if guess is correct increase win counter by 1
-
-
-//if guess is wrong decrease counter by 1
+ 
+    //give the player 10 guesses
 
 
-//if guesses hit 0 then increase losses counter by 1
+    //if guess is correct increase win counter by 1
 
 
-//add letter to the guess section maybe write as a function?
+    //if guess is wrong decrease counter by 1
 
 
-//reset the game maybe write as a function?
+    //if guesses hit 0 then increase losses counter by 1
 
+
+    //add letter to the guess section maybe write as a function?
+
+
+    //reset the game maybe write as a function?
+};
 
